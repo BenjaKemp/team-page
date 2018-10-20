@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Banner = (props) => (
+const SingleTeamMember = (props) => (
 
- <div>
-   <p>Here be workers</p>
+ <div className="team-member">
+
+   <p>{props.FirstName}</p>
+   <p>{props.FirstName}</p>
+   <p>{props.FirstName}</p>
+   <p>{props.FirstName}</p>
  </div>
 );
 
-export default Banner;
+export default SingleTeamMember;

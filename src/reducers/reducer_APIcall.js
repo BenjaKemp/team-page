@@ -1,4 +1,3 @@
-import { SET_SEARCH_RESULTS } from "../constants/action-types";
 
 const initialState = [ {
  "$id":"1",
@@ -53,6 +52,33 @@ const initialState = [ {
  "IsAdmin":false,
  "IsResponsible":false,
  "Active":false
+},
+ {
+ "$id":"3",
+ "UserId":63287,
+ "UserKey":"00004",
+ "CompanyId":14138,
+ "FirstName":"Ben",
+ "LastName":"Kemp",
+ "Acronym":"Ak",
+ "Email":"empleado4@woffutest.com",
+ "EmployeeStartDate":"2003-01-04T00:00:00.000",
+ "ImageURL":"https://woffu.blob.core.windows.net/images/1526982032157.png",
+ "DepartmentId":14350,
+ "JobTitleId":null,
+ "ResponsibleUserId":62823,
+ "AuthorizingUserId":63284,
+ "AllocatedDays":25.000,
+ "UsedDays":7.000,
+ "AvailableDays":18.000,
+ "AccumulatedDays":10.003,
+ "LanguageId":1,
+ "CalendarId":6960,
+ "AgreementId":6001,
+ "Weekends":"0,6",
+ "IsAdmin":false,
+ "IsResponsible":false,
+ "Active":false
  }
 ]
 
@@ -60,8 +86,7 @@ const initialState = [ {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case SET_SEARCH_RESULTS:
-      return  action.results;
+
     default:
       return state;
   }

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import Dates from './Dates'
+import Headings from './Headings'
 import SingleTeamMember from "../components/SingleTeamMember";
-
+import myFilter from "../helpers/filters"
 class TeamPage extends Component {
   renderList() {
     return this.props.team_members.map( member => {
@@ -13,9 +14,13 @@ class TeamPage extends Component {
   }
   render() {
 
+    console.log('team_members', this.props.team_members)
     return (
       <div className="entire-container">
-          <div className="container">{this.renderList()}</div>
+          <div className="container">
+            <Headings/>
+            {this.renderList()}
+          </div>
         </div>
 
     );
@@ -24,8 +29,7 @@ class TeamPage extends Component {
 
 function mapStateToProps(state) {
   return {
-    team_members: state.team_members
-
+    team_members: myFilter(state)
   };
 }
 
@@ -33,3 +37,6 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps
 )(TeamPage);
+
+
+// <Dates/>
