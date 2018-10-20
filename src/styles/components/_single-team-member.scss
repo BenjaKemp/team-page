@@ -1,7 +1,25 @@
 .team-member {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 30px;
   width: 675px;
   margin: 5px;
   padding: 5px;
   border: black solid 2px;
+  img {
+    height:30px;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+.employee-details{
+display: flex;
+flex-direction: column;
+
+}
+.job-details{
+display:flex;
+flex-direction: row;
+
 }
